@@ -1,0 +1,180 @@
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-window {
+  position: absolute;
+
+  width: 528px;
+  height: 581px;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-window__button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0000001a;
+  background-color: unset;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  padding: 0;
+
+  &:focus .modal-icon,
+  &:hover .modal-icon {
+    fill: $accent-color;
+  }
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window__icon {
+  fill: #000000;
+  width: 11px;
+  height: 11px;
+}
+
+/* ----MODAL FORM----- */
+.modal-form {
+  padding: 40px;
+}
+/* modal title */
+.modal-form__title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondary-title-color;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.modal-form__field {
+  margin-bottom: 10px;
+}
+
+.modal-form__label {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17em;
+  letter-spacing: 0.01em;
+  color: $main-text-color;
+  margin-bottom: 4px;
+}
+
+.modal-form__wrapper {
+  margin-top: 4px;
+  display: block;
+  position: relative;
+}
+/* modal input */
+.modal-form__input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 40px;
+}
+/* modal icon */
+.modal-form__icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* comment in modal */
+.modal-form__comment {
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-top: 15px;
+  resize: none;
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+/*  --------- checkbox icon--------- */
+
+.checkbox:checked + .checkbox__label > .checkbox__icon {
+  background: $accent-color;
+  border: 2px solid transparent;
+}
+.checkbox__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.checkbox__icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: $main-title-color;
+}
+/* ----------------policy text-------------- */
+.checkbox__policy-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+}
+.checkbox__policy-agreement {
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+/* ------------send form button------------- */
+.form-btn {
+  width: 200px;
+  height: 50px;
+  background-color: $accent-color;
+  color: $main-title-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87em;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
