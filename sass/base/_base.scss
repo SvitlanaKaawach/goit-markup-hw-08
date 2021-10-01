@@ -1,15 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
-  padding-top: 60px;
+}
 
-  @media screen and (min-width: 768px) {
-    padding-top: 80px;
-  }
-}
-body.modal-open {
-  overflow: hidden;
-}
 p,
 h1,
 h2,
@@ -37,10 +30,11 @@ a {
 
 .container {
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  min-width: 320px;
+
   @media screen and (min-width: $mobile) {
-    min-width: 320px;
+    min-width: 480px;
   }
   @media screen and (min-width: $tablet) {
     min-width: 768px;
@@ -51,12 +45,7 @@ a {
 }
 
 .section {
-  padding: 30px 0;
-
-  @media screen and (min-width: $mobile) {
-    padding: 60px 0;
-  }
-
+  padding: 60px 0;
   @media screen and (min-width: $laptop) {
     padding: 94px 0;
   }
@@ -73,20 +62,19 @@ a {
   margin: -1px;
 }
 .section__title {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: $secondary-title-color;
 
-  @media screen and (min-width: $mobile) {
-    margin-bottom: 30px;
-  }
-
   @media screen and (min-width: $laptop) {
     margin-bottom: 50px;
+    margin-top: 0;
+    font-size: 36px;
+    line-height: 1.66;
   }
 }
