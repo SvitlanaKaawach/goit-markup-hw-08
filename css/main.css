@@ -282,6 +282,13 @@ a {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 .hero__button {
   color: #ffffff;
   background-color: #2196f3;
