@@ -28,6 +28,7 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("/img/hero-img/Hero-tablet.jpg");
+    max-width: 768px;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -45,6 +46,9 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("/img/hero-img/Hero-desktop.jpg");
+    max-width: 1600px;
+    max-height: 600px;
+    padding: 200px 0px;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -55,23 +59,11 @@
         url("/img/hero-img/Hero-desktop@2x.jpg");
     }
   }
-
-  @media screen and (min-width: $tablet) {
-    max-width: 768px;
-  }
-  @media screen and (min-width: $laptop) {
-    max-width: 1600px;
-    max-height: 600px;
-    padding: 200px 0px;
-  }
 }
 .hero__container {
   padding: 0;
-  max-width: auto;
+  max-width: 360px;
 
-  @media screen and(min-width: 480px) {
-    max-width: 480px;
-  }
   @media screen and(min-width: $laptop) {
     max-width: 696px;
   }
