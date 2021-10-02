@@ -196,7 +196,7 @@
                ./img/team/igor-img/igor-mob_img@2x-min.jpg 2x"
                 media="(min-width:320px)"
                />
-              <img
+              <img class="team-card__img"
               src="./img/team/igor-img/igor-mob_img-min.jpg"
               alt="Игорь Демьяненко"
             />
@@ -235,7 +235,7 @@
                   media="(min-width:1200px)"> 
                   <source srcset="./img/team/olga-img/olga-tab_img-min.jpg 1x, ./img/team/olga-img/olga-tab_img@2x-min.jpg 2x" media="(min-width:768px)">
                   <source srcset="./img/team/olga-img/olga-mob_img-min.jpg 1x, ./img/team/olga-img/olga-mob_img@2x-min.jpg 2x" media="(min-width:320px)"> 
-                  <img
+                  <img class="team-card__img"
               src="./img/team/olga-img/olga-mob_img-min.jpg"
               alt="Ольга Репина"
             /></picture>
@@ -270,10 +270,19 @@
           <li class="team__item">
             <article class="team-card">
               <div class="team-card__thumb">
-            <img
-              src="./img/img6.jpg"
+                <picture>
+                  <source srcset="./img/team/nick-img/nick-laptop_img-min.jpg 1x,
+                  ./img/team/nick-img/nick-laptop_img@2x-min.jpg 2x " media="(min-width:1200px)">
+                  <source srcset="./img/team/nick-img/nick-tab_img-min.jpg 1x, 
+                  ./img/team/nick-img/nick-tab_img@2x-min.jpg 2x " media="(min-width:768px)">
+                  <source srcset="./img/team/nick-img/nick-mob_img-min.jpg 1x,
+                   ./img/team/nick-img/nick-mob_img-min.jpg 2x " media="(min-width:320px)">
+                 <img class="team-card__img"
+              src="./img/team/nick-img/nick-mob_img-min.jpg"
               alt="Николай Тарасов"
             />
+          </picture>
+           
             </div>
             <div class="team-card__content">
             <h3 class="team-card__title">Николай Тарасов</h3>
@@ -303,12 +312,19 @@
           <li class="team__item">
             <article class="team-card">
               <div class="team-card__thumb">
-            <img
-              src="./img/img7.jpg"
-              width="270"
-              height="260"
+                <picture>
+                  <source srcset="./img/team/misha-img/misha-laptop_img-min.jpg 1x, 
+                  ./img/team/misha-img/misha-laptop_img@2x-min.jpg 2x " media="(min-width:1200px)">
+                  <source srcset="./img/team/misha-img/misha-tab_img-min.jpg 1x, 
+                  ./img/team/misha-img/misha-tab_img@2x-min.jpg 2x" media="(min-width:768px)">
+                  <source srcset="./img/team/misha-img/misha-mob_img-min.jpg 1x, 
+                  ./img/team/misha-img/misha-mob_img-min.jpg 2x" media="(min-width:320px)">
+                <img class="team-card__img"
+              src="./img/team/misha-img/misha-mob_img-min.jpg"
               alt="Михаил Ермаков"
             />
+          </picture>
+            
             </div>
             <div class="team-card__content">
             <h3 class="team-card__title">Михаил Ермаков</h3>
