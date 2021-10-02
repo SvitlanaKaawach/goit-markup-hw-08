@@ -1,7 +1,13 @@
+.section-services {
+  display: none;
+  @media screen and (min-width: $laptop) {
+    display: block;
+    padding-top: 0;
+  }
+}
 .services {
   display: flex;
 }
-
 .services__item {
   position: relative;
   &:not(:last-child) {

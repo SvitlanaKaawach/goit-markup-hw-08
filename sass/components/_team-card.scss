@@ -10,20 +10,28 @@
 }
 
 .team {
-  display: flex;
-
-  margin-left: calc(-1 * $gallery-set-gap);
-  margin-top: calc(-1 * $gallery-set-gap);
+  margin-bottom: calc(-1 * $gallery-set-gap);
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * $gallery-set-gap);
+  }
 }
 .team__item {
-  flex-basis: calc((100% / 4 - $gallery-set-gap));
-  margin-left: $gallery-set-gap;
-  margin-top: $gallery-set-gap;
-
+  width: 100%;
+  margin-bottom: $gallery-set-gap;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: $gallery-set-gap;
+  }
+  @media screen and (min-width: $laptop) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 /* ------Team members ---------*/
