@@ -1,8 +1,6 @@
 .team-card__content {
   padding-top: 30px;
   padding-bottom: 30px;
-  align-items: center;
-  background-color: #ffffff;
 }
 
 .team {
@@ -55,12 +53,17 @@
 }
 
 .team-card__img {
-  width: 450px;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
 
   @media screen and (min-width: $tablet) {
     width: 354px;
   }
-  @media screen and (min-width: $laptop) {
+
+  @media screen and (min-width: $desktop) {
     width: 270px;
   }
 }
