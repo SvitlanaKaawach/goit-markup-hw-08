@@ -1,11 +1,22 @@
 /* --------------Header-contacts-------------- */
 
 .contacts {
-  display: flex;
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $laptop) {
+    display: flex;
+    margin-left: auto;
+  }
 
-  &__item + &__item {
-    margin-left: 50px;
+  &__item:not(:last-child) {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-right: 30px;
   }
 }
 .contacts__link {
@@ -13,11 +24,15 @@
   align-items: center;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   text-decoration: none;
+  @media screen and (min-width: $laptop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:focus,
   &:hover {
