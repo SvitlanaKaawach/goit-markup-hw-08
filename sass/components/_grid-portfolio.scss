@@ -1,20 +1,25 @@
 .grid {
-  margin-left: -30px;
-  margin-top: -30px;
-
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .grid__item {
-  flex-basis: calc((100% / 3 - 180));
-  margin-left: $gallery-set-gap;
-  margin-top: $gallery-set-gap;
-
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
-  &:nth-child(3n) {
-    margin-right: 0px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
   }
 }
