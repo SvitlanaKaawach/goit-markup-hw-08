@@ -16,3 +16,24 @@
     color: #000000;
   }
 }
+.menu-toggle {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.icon-menu {
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-toggle:hover .icon-menu,
+.menu-toggle:focus .icon-menu {
+  fill: $accent-color;
+}
