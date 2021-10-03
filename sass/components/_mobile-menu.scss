@@ -44,7 +44,8 @@
 }
 
 .mobile-list__link {
-  color: $main-title-color;
+  color: #212121;
+
   font-size: 30px;
   font-weight: 500;
   line-height: 1.17;
@@ -119,12 +120,13 @@
   color: $accent-color;
 }
 
-.mobile-socials__link--after {
+.mobile-socials__link--devider {
   &::after {
     content: "";
     width: 0;
     height: 22px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     margin-left: 10px;
+    fill: #212121;
   }
 }
