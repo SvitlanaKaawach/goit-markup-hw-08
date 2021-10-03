@@ -21,10 +21,15 @@
   <body>
     <!-- Меню навигации -->
 
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
-       <nav class="header__navigation"> 
-        <a class="header__logo link"  href=""> Web<span class="header__logo-span link" >Studio</span></a> 
+        <a class="header__logo link"  href=""> Web<span class="header__logo-span link" >Studio</span></a>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile menu" type="button">
+           <svg width="40" height="40">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            </svg>
+            </button>
+        <nav class="header__navigation"> 
         <ul class="header__list">
           <li class="header__item"><a class="header__link link current" href="/index.html">Студия</a></li>
           <li class="header__item"><a class="header__link link" href="./portfolio.html ">Портфолио</a></li>
@@ -43,7 +48,7 @@
             </svg> +380961111111</a></li>
         </ul>
       </div>
-    </header> -->
+    </header>
 
     <!-- Герой -->
     <main>
@@ -271,12 +276,9 @@
             <article class="team-card">
               <div class="team-card__thumb">
                 <picture>
-                  <source srcset="./img/team/nick-img/nick-laptop_img-min.jpg  1x,
-                  ./img/team/nick-img/nick-laptop_img@2x-min.jpg  2x " media="(min-width:1200px)">
-                  <source srcset="./img/team/nick-img/nick-tab_img-min.jpg 1x, 
-                  ./img/team/nick-img/nick-tab_img@2x-min.jpg  2x " media="(min-width:768px)">
-                  <source srcset="./img/team/nick-img/nick-mob_img-min.jpg 1x,
-                   ./img/team/nick-img/nick-mob_img-min.jpg  2x " media="(min-width:480px)">
+                  <source srcset="./img/team/nick-img/nick-laptop_img-min.jpg 1x, ./img/team/nick-img/nick-laptop_img@2x-min.jpg 2x " media="(min-width:1200px)">
+                  <source srcset="./img/team/nick-img/nick-tab_img-min.jpg 1x, ./img/team/nick-img/nick-tab_img@2x-min.jpg 2x " media="(min-width:768px)">
+                  <source srcset="./img/team/nick-img/nick-mob_img-min.jpg 1x, ./img/team/nick-img/nick-mob_img-min.jpg 2x " media="(min-width:480px)">
                  <img class="team-card__img"
               src="./img/team/nick-img/nick-mob_img-min.jpg"
               alt="Николай Тарасов"
@@ -311,21 +313,21 @@
 
           <li class="team__item">
             <article class="team-card">
-              <div class="team-card__thumb">
+              
                 <picture>
                   <source srcset="./img/team/misha-img/misha-laptop_img-min.jpg 1x, 
                   ./img/team/misha-img/misha-laptop_img@2x-min.jpg 2x " media="(min-width:1200px)">
                   <source srcset="./img/team/misha-img/misha-tab_img-min.jpg 1x, 
                   ./img/team/misha-img/misha-tab_img@2x-min.jpg 2x" media="(min-width:768px)">
                   <source srcset="./img/team/misha-img/misha-mob_img-min.jpg 1x, 
-                  ./img/team/misha-img/misha-mob_img-min.jpg 2x" media="(min-width:320px)">
+                  ./img/team/misha-img/misha-mob_img-min.jpg 2x" media="(min-width:480px)">
                 <img class="team-card__img"
               src="./img/team/misha-img/misha-mob_img-min.jpg"
               alt="Михаил Ермаков"
             />
           </picture>
             
-            </div>
+            
             <div class="team-card__content">
             <h3 class="team-card__title">Михаил Ермаков</h3>
             <p class="team-card__text"  lang="en">UI Designer</p>
@@ -355,7 +357,7 @@
     </section>
 
       <!-- Постоянные клиенты -->
-      <!-- <section class=" section">
+      <section class=" section">
       <div class="container">
         <h2 class="section__title">Постоянные клиенты</h2>
         <ul class="clients">
@@ -381,14 +383,15 @@
 
       </div>
 
-    </section> -->
+    </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
+        <div class="contacts-wrapper">
         <div class="contacts-container">
        <h2 class="visually-hidden">Наши контакты</h2>
-        <a class="footer__logo link" href=""> Web<span class="footer__logo-span">Studio</span> </a>
+        <a class="footer__logo link" href="./index.html"> Web<span class="footer__logo-span">Studio</span> </a>
        <address> 
          <ul  class="footer-contacts" >      
           <li class="footer-contacts__item"><a class="footer-contacts__link link"
@@ -419,6 +422,7 @@
          </svg></a> </li>
        </ul>
       </div>
+      </div>
        <form class="subscribe">
        <p class="subscribe__title ">Подпишитесь на рассылку</p>
          <span class="subscribe__form"> 
@@ -431,7 +435,7 @@
 
       </div>
       </div>
-    </footer> -->
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">

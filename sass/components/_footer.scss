@@ -1,9 +1,35 @@
 .footer {
   background-color: #2f303a;
   padding: 60px 0px;
-  &-container {
+}
+.contacts-wrapper {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: $laptop) {
     display: flex;
   }
+}
+.footer-container {
+  @media screen and (min-width: $laptop) {
+    display: flex;
+  }
+}
+.contacts-container {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-right: 70px;
+  }
+}
+.footer-logo link {
+  display: block;
 }
 .footer__logo {
   font-family: "Raleway", sans-serif;

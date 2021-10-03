@@ -1,38 +1,66 @@
-.team-card__content {
-  padding-top: 30px;
-  background-color: #ffffff;
-  padding-bottom: 24px;
-  padding-left: 30px;
-  padding-right: 30px;
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 30px;
-  }
-}
-
 .team {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team__item {
-  width: 100%;
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc(100% / 1 - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
-  @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - 30px);
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 4 - 30px);
+
+  @media screen and (min-width: $tablet) {
+    width: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: calc(100% / 4 - 30px);
   }
 }
 
 /* ------Team members ---------*/
+.team-card__content {
+  padding-top: 30px;
+  background-color: #ffffff;
+  padding-bottom: 30px;
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 270px;
+  }
+}
+
+.team-card__img {
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+    height: 374px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 270px;
+    height: 260px;
+  }
+}
 
 .team-card__title {
   margin-bottom: 10px;
@@ -48,6 +76,8 @@
 /* -------team-position-------- */
 
 .team-card__text {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;

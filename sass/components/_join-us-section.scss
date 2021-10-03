@@ -1,6 +1,11 @@
 .join-footer {
-  margin-left: 70px;
-  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $laptop) {
+    margin-left: 70px;
+    justify-content: center;
+  }
   &__title {
     font-style: normal;
     font-weight: bold;
@@ -14,9 +19,21 @@
   }
 }
 .footer-social-network {
-  align-items: baseline;
   display: flex;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: $laptop) {
+    align-items: baseline;
+  }
 }
+.footer-social-network {
+  @media screen and (min-width: $laptop) {
+    align-items: baseline;
+    display: flex;
+  }
+}
+
 .footer-social-network__item + .footer-social-network__item {
   margin-left: 10px;
 }
@@ -29,15 +46,15 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
-.footer-social-network__link:hover,
-.footer-social-network__link:focus {
-  background-color: $accent-color;
-  color: $main-title-color;
-}
+
 .footer-social-network__icon {
   fill: #ffffff;
 }

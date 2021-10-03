@@ -1,9 +1,17 @@
 address {
   font-style: normal;
-  margin-top: 20px;
+  @media screen and (min-width: $laptop) {
+    margin-top: 20px;
+  }
 }
 .footer-contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-bottom: 9px;
+  }
 }
 .footer-contacts__link.link {
   color: $main-title-color;
@@ -16,4 +24,12 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.footer-contacts__link,
+.footer-contacts__link-contact {
+  display: block;
 }

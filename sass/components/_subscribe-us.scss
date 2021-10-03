@@ -1,6 +1,15 @@
 .subscribe {
-  margin-left: 93px;
-  justify-content: center;
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-left: 93px;
+    justify-content: center;
+  }
 }
 .subscribe__title {
   font-weight: bold;
@@ -10,12 +19,16 @@
   text-transform: uppercase;
   color: $main-title-color;
   margin-bottom: 20px;
+  justify-content: center;
 }
 .subscribe__form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and (min-width: $laptop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
 /* ----------subscribe-email form---------- */
 .subscribe__email {
   font-weight: normal;
@@ -25,18 +38,33 @@
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
   height: 50px;
-  width: 358px;
-  padding-left: 16px;
-
-  &:focus,
-  &:hover {
-    border: 1px solid $accent-color;
+  width: 100%;
+  padding-left: 10px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
   }
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $mobile) {
+    width: 358px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: $laptop) {
+      margin-right: 12px;
+      width: 358px;
+    }
+
+    &:focus,
+    &:hover {
+      border: 1px solid $accent-color;
+    }
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 /* ------------subscribe us button-------------- */
@@ -60,6 +88,10 @@
 
   height: 50px;
   width: 200px;
+  @media screen and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &:focus,
   &:hover {
