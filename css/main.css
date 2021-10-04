@@ -1326,6 +1326,7 @@ address {
 @media screen and (min-width: 480px) {
   .modal-form__comment {
     min-height: 120px;
+    margin-top: 4px;
   }
 }
 
